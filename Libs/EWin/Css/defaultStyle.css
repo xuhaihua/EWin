@@ -1,0 +1,282 @@
+﻿/*--
+	本文件主要用于定义在默认情况下eWin元素的外观尺寸、背景颜色、前景色以及元素内内容的样式
+--*/
+
+/*-------------------------------------------------------定义桌面布局开始--------------------------------------------------*/
+.deskTop
+{
+	display:table;
+}
+
+.winSpaceLay, .taskBarLay
+{
+	display:table-row;
+	padding:0px;
+	margin:0px;
+	border:0px;
+}
+
+.deskTop .winSpace,
+.deskTop .taskBar
+{
+	display:table-cell;
+}
+/*--------------------------------------------------------定义桌面布局结束----------------------------------------------------*/
+
+
+/*------------------------------------------------------定义元素默认尺寸开始--------------------------------------------------*/
+
+/*
+	默认情况下：
+		* html元素、body元素的高度和宽度总是等于客户区的大小
+		* deskTop元素的宽度和高度总是等于其父元素尺寸
+		* 任务栏元素的宽度等于其父元素的宽度，高度为30个像素
+		* 窗体缩略图除margin外的外盒宽度为166px，内盒宽度为136px,左内边距为30px,高度为27px，同时它带8个像素的左偏移和3个像素的上偏移
+		* 其它元素采用浏览器默认值[一般width=auto、height=auto]
+*/
+html,
+body
+{
+	width:100%;
+	height:100%;
+	padding:0px;
+	border:0px;
+	margin:0px;
+    overflow:hidden;
+}
+
+.deskTop
+{
+	width:100%;
+	height:100%;
+	
+}
+
+.deskTop .taskBar
+{
+	width:auto;
+	height:30px;
+}
+
+.deskTop .taskBar .thum
+{
+	width:136px;
+	padding-left:30px;
+	margin-top:3px;
+	margin-left:8px;
+}
+/*------------------------------------------------------定义元素默认尺寸开始--------------------------------------------------*/
+
+
+/*------------------------------------对元素的视觉进行样式定义开始[例如：前景色、背景色、字体大小等---------------------------*/
+
+/*桌面元素样式*/
+.deskTop
+{
+	background-image:url("img/deskTopBg.jpg");
+	background-repeat:repeat;
+    background-size:cover;
+}
+
+/*
+	窗体的样式：
+		* 窗体为圆角矩形并且含有一定的内边距，窗体周围包含有一定的阴影
+*/
+.deskTop .winSpace .window
+{
+	padding:5px;
+	border:1px solid #8ea4c1;
+	border-radius: 5px;
+	-moz-box-shadow:-5px -5px 15px #777777;              
+    -webkit-box-shadow:-5px -5px 15px #777777;           
+    box-shadow:-5px -5px 15px #777777;  
+	background-color:#ccd8e7;
+}
+
+/*
+	标题栏样式：
+		* 背景色为淡灰色
+		* 在默认情况下将代表window窗体的logo作为标题栏的背景图
+*/
+.deskTop .winSpace .window .titleBar
+{
+	background-image:url("img/winLogo.png");
+	background-repeat:no-repeat;
+	background-color:#ccd8e7;
+}
+
+/*
+	标题栏内按钮样式：
+		* 每类按钮都有默认的背景图，并且背景图在默认情况下处于水平拉伸和垂直拉伸
+*/
+.deskTop .winSpace .window  .titleBar .closeBut , 
+.deskTop .winSpace .window  .titleBar .maxBut ,
+ .deskTop .winSpace .window  .titleBar .minBut
+{
+	background-repeat:repeat;
+    background-size:cover;
+}
+
+.deskTop .winSpace .window  .titleBar .minBut
+{
+	background-image:url("img/minBut1.jpg");
+}
+
+.deskTop .winSpace .window  .titleBar .minBut:hover
+{
+	background-image:url("img/minBut2.jpg");
+}
+
+.deskTop .winSpace .window  .titleBar .maxBut
+{
+	background-image:url("img/maxBut1.jpg");
+}
+
+.deskTop .winSpace .window  .titleBar .maxBut:hover
+{
+	background-image:url("img/maxBut2.jpg");
+}
+
+.deskTop .winSpace .window  .titleBar .closeBut
+{
+	background-image:url("img/closeBut1.jpg");
+}
+
+.deskTop .winSpace .window  .titleBar .closeBut:hover
+{
+	background-image:url("img/closeBut2.jpg");
+}
+
+.deskTop .winSpace .window .titleBar  .caption
+{
+	display:inline-block;
+	color:#3e63a0;
+	font-weight:bold;
+	font-size:12px;
+}
+
+/*
+	窗体菜单样式：
+		* 主菜单栏的背景色为中亮灰色，带有一定的边框
+		* 主菜单项内的内容水平居中
+		* 子菜单栏带有一定的边框，并且周围含有一定的阴影
+*/
+.deskTop .winSpace .window .emenu
+{
+	
+	border:1px solid #a9b7d2;
+	background-color:#dee8f4;
+}
+
+.deskTop .winSpace .window .emenu .menuItem 
+{
+	text-align:center;
+}
+
+.deskTop .winSpace .window .emenu .menuItem  .childMenu
+{
+	border:1px solid #adb4be;
+	background-color:#f0f0f0;
+	-moz-box-shadow:5px 5px 15px #777777;              
+    -webkit-box-shadow:5px 5px 15px #777777;           
+    box-shadow:5px 5px 15px #777777;  
+}
+
+.deskTop .winSpace .window .emenu .menuItem  .childMenu .menuItem
+{
+	clear:both;
+}
+
+/*
+	工具栏样式：
+		* 工具栏背景色为中亮灰色，带有一定像素的边框，内容垂直居中
+*/
+.deskTop .winSpace .window .toolArea .toolBar
+{
+	border:1px solid #a9b7d2;
+	background-color:#dee8f4;
+}
+
+/*
+	tabControl元素样式定义：
+		* tabHead元素带有一定像素的边框，背景为中亮灰
+		* tag元素为圆角矩形，带有一定像素的边框，内容水平垂直居中，背景为高亮蓝灰
+		* tabBody元素带有一定像素的边框
+		* substance元素的背景色为纯白色
+*/
+.deskTop .tabControl .tabHead
+{
+	border:1px solid #a9b7d2;
+	background-color:#dee8f4;
+}
+
+.deskTop .tabControl .tabHead .tag
+{
+	text-align:center;
+	border:1px solid #8db2e3;
+	border-radius: 5px 5px 0px 0px;
+	font-size:12px;
+	background-image:url("img/tagBg.jpg");
+}
+
+.deskTop .winSpace .window  .workSpace .tabControl .tabBody
+{
+	border:1px solid #a9b7d2;
+}
+
+.deskTop .winSpace .window  .workSpace .tabControl .tabBody .substance
+{
+	background-color:#fff;
+}
+
+/*
+    定义框架基本样式：
+		* 与框架相关的所有元素背景色统一为白色
+		* 主框架带有一个像素的边框
+*/
+.deskTop .splitContainer,
+.deskTop .splitContainer .panel,
+.deskTop .splitContainer .vSpaceBar,
+.deskTop .splitContainer .hSpaceBar
+{
+	background-color:#fff;
+}
+
+.deskTop .splitContainer 
+{
+	border:1px solid #99bbe8;
+}
+
+.deskTop .splitContainer .panel .splitContainer
+{
+	border:0px;
+}
+
+/*
+	工作区样式定义：
+		* 工作区元素带一个像素的边框，背景色为白色
+*/
+.deskTop .winSpace .window .workSpace 
+{
+	background-color:#fff;
+	border:1px solid #a9b7d2;
+}
+
+/*
+	任务栏样式定义：
+		* 任务栏为一张黑色背景图
+		* 任务栏中的窗体缩略图元素：内容垂直居中
+*/
+.deskTop .taskBar
+{
+    background-repeat:repeat;
+	background-image:url("img/taskBarBg.jpg");
+}
+
+.deskTop .taskBar .thum
+{
+	height:27px;
+	line-height:27px;
+	background-image:url("img/thum.jpg");
+}
+/*--------------------------------------------------对元素的视觉进行样式定义结束-----------------------------------------*/

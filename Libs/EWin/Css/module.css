@@ -1,0 +1,186 @@
+﻿/*--
+	本文件主要用于对eWin元素的盒模型、堆叠顺序、元素默认起始位置以及元素可见范围进行相应的定义
+--*/
+
+/*--------------------------------------------------定义元素盒模型开始---------------------------------------------------*/
+
+/*将元素转换为块状*/
+.common,
+.deskTop, 
+.deskTop .shortcutMenu , 
+.deskTop .shortcutChildMenu , 
+.deskTop .shortcutMenuItem , 
+.deskTop .winSpace ,
+.deskTop .winSpace .icon ,
+.deskTop .winSpace .window , 
+.deskTop .winSpace .window .titleBar ,
+.deskTop .winSpace .window .titleBar .closeBut , 
+.deskTop .winSpace .window .titleBar  .maxBut , 
+.deskTop .winSpace .window .titleBar .minBut , 
+.deskTop .emenu ,
+.deskTop .emenu .menuItem,
+.deskTop .emenu .menuItem .menuText,
+.deskTop .emenu .menuItem .childMenu,
+.deskTop .toolArea , 
+.deskTop .toolArea .toolBar , 
+.deskTop .toolArea .toolBar .toolItem ,
+.deskTop .winSpace .window .workSpace , 
+.deskTop .tabControl , 
+.deskTop .tabControl .tabHead , 
+.deskTop .tabControl .tabHead .tag , 
+.deskTop .tabControl .tabBody , 
+.deskTop .tabControl .tabBody .substance ,
+.deskTop .splitContainer , 
+.deskTop .splitContainer .panel , 
+.deskTop .splitContainer .hSpaceBar , 
+.deskTop .splitContainer .vSpaceBar , 
+.deskTop .taskBar , 
+.deskTop .taskBar .startMenu , 
+.deskTop .taskBar .startMenu .startChildMenu , 
+.deskTop .taskBar .startMenu .startMenuItem , 
+.deskTop .taskBar .startMenu .startMenuItem .menuText,
+.deskTop .taskBar .thum
+{
+	display:block;
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+
+/*
+	定义元素定位方式：
+		* 窗体元素window为：绝对定位
+		* 所有类型菜单项[menuItem、startMenuItem、shortcutMenuItem]为：相对定位
+		* 所有子菜单栏[childMenu、startChildMenu、shortcutChildMenu]为：绝对定位
+		* 开始菜单栏[startMenu]、窗体菜单栏[emenu]为：相对定位
+		* 快捷菜单栏[shortcutMenu]为：绝对定位
+		* 窗体的标题栏、工具栏、工作区元素为：相对定位
+		* 窗体工作区布局控件[tabControl、splitContainer]及其子元素为：相对定位
+		* 标签布局控件内的substance元素为：绝对定位
+*/
+.deskTop .winSpace,
+.deskTop .winSpace .icon ,
+.deskTop .winSpace .window .titleBar ,
+.deskTop .winSpace .window .toolArea , 
+.deskTop .winSpace .window .toolArea .toolBar , 
+.deskTop .emenu,
+.deskTop .emenu .menuItem,
+.deskTop .emenu .childMenu .menuItem,
+.deskTop .winSpace .window .workSpace,
+.deskTop .tabControl ,
+.deskTop .tabControl .tabHead , 
+.deskTop .tabControl .tabHead .tag ,
+.deskTop .tabControl .tabBody , 
+.deskTop .splitContainer , 
+.deskTop .splitContainer .panel , 
+.deskTop .splitContainer .hSpaceBar , 
+.deskTop .splitContainer .vSpaceBar , 
+.deskTop .shortcutMenu .shortcutMenuItem,
+.deskTop .taskBar,
+.deskTop .taskBar .startMenu,
+.deskTop .taskBar .startMenu .startChildMenu  .startMenuItem,
+.deskTop .taskBar .thum
+{
+	position:relative;
+}
+
+.deskTop .shortcutMenu ,
+.deskTop .shortcutMenu .shortcutChildMenu,
+.deskTop .winSpace .window  ,
+.deskTop .winSpace .window .tabControl .tabBody .substance ,
+.deskTop .taskBar .startMenu .startChildMenu,
+.deskTop .emenu .menuItem  .childMenu
+ {
+ 	position:absolute;
+ }
+
+/*
+	定义元素的浮动方式：
+		* 主菜单项、工具项、标签元素内的tag子元素、开始菜单栏[startMenu]、窗体缩略图为：左浮动
+		* 标题栏中的最小化按钮、最大化按钮、关闭按钮为：右浮动
+*/
+.deskTop .emenu .menuItem,
+.deskTop .toolArea .toolBar .toolItem,
+.deskTop .tabControl .tabHead .tag,
+.deskTop .taskBar .startMenu,
+.deskTop .taskBar .thum
+{
+ 	float:left;
+}
+
+.deskTop .emenu .childMenu .menuItem
+{
+	float:none;
+}
+
+.deskTop .winSpace .window .titleBar .closeBut , 
+.deskTop .winSpace .window .titleBar  .maxBut , 
+.deskTop .winSpace .window .titleBar .minBut
+{
+	float:right;
+}
+/*--------------------------------------------------定义元素盒模型结束---------------------------------------------------*/
+
+ 
+/*---------------------------------------定义元素在其定位祖先元素内的默认起始位置开始------------------------------------*/
+
+/*
+	* 默认情况下窗体首次打开的起始位置总在winSpace内的(100,100)坐标上
+	* tabControl控件中的tag子元素在默认情况下起始位置总在他的原始排列顺序位置上
+	* icon、substance元素在默认情况下起始位置总在它的相对定位祖先元素(0，0)坐标上[在这里icon的相对定义祖先元素为：winSpace、substance的相对定位祖先元素为：tabBody]
+*/
+.deskTop , .deskTop .winSpace .window 
+{
+	left:100px;
+	top:100px;
+}
+
+.deskTop .tabControl .tabHead .tag ,
+.deskTop .tabControl .tabBody .substance ,
+.deskTop .winSpace .icon 
+{
+	left:0px;
+	top:0px;
+}
+/*---------------------------------------定义元素在其定位祖先元素内的默认起始位置结束------------------------------------*/
+
+
+/*--------------------------------------------定义元素默认的堆叠顺序开始-------------------------------------------------*/
+.deskTop .shortcutMenu, 
+.deskTop .shortcutChildMenu, 
+.deskTop .childMenu, 
+.deskTop .startChildMenu
+{
+	z-index:3333;
+}
+
+.deskTop .winSpace ,
+.deskTop .winSpace .window .titleBar,
+.deskTop .winSpace .window .toolArea,
+.deskTop .winSpace .window .workSpace
+.deskTop .winSpace .window .toolBar,
+.deskTop .winSpace .window .emenu .menuItem,
+.deskTop .taskBar .startMenu .startMenuItem,
+.deskTop .taskBar,
+.deskTop .taskBar .thum 
+{
+	z-index:100;
+}
+
+.deskTop .winSpace .window .emenu
+{
+	z-index:105;
+}
+
+/*--------------------------------------------定义元素默认的堆叠顺序结束-------------------------------------------------*/
+
+
+/*-----------------------------------------------定义元素可见范围开始----------------------------------------------------*/
+
+/*默认情况下窗体的视觉范围在WinSpace区域WorkSpace区域内*/
+.deskTop .winSpace ,
+.deskTop .window .workSpace 
+{
+    overflow:hidden;
+}
+/*-----------------------------------------------定义元素可见范围结束----------------------------------------------------*/

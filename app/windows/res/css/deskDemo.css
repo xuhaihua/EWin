@@ -1,0 +1,782 @@
+﻿
+/*-----------------------------------------定义demo中元素的通用样式开始---------------------------*/
+.window
+{
+	width:500px;
+	height:450px;
+}
+
+#deskDemo .winSpace .window .titleBar
+{
+	width:auto;
+	height:22px;
+	line-height:22px;
+}
+
+#deskDemo .window .titleBar  .caption
+{
+	margin-left:20px;
+}
+
+#deskDemo .window  .titleBar .closeBut , 
+#deskDemo .window  .titleBar .maxBut ,
+#deskDemo .window  .titleBar .minBut
+{
+	width:15px;
+	height:15px;
+	margin-right:5px;
+}
+#deskDemo .window  .titleBar .closeBut
+{
+	margin-right:0px;
+}
+
+#deskDemo .emenu
+{
+	width:auto;
+	line-height:26px;
+	height:26px;
+}
+
+#deskDemo .window .toolArea .toolBar
+{
+	width:auto;
+	height:26px;
+	line-height:26px;
+}
+/*------------------------------------------定义demo中元素的通用样式结束---------------------------*/
+
+
+/*-----------------------------------------------图标样式定义开始----------------------------------*/
+#deskDemo .icon
+{
+	width:80px;
+	height:75px;
+	margin-left:20px;
+	margin-top:15px;
+}
+
+/*图标图像区及文字区样式定义*/
+#deskDemo .icon dt, 
+#deskDemo .icon dd
+{
+	display:block;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	text-align:center;
+}
+
+#deskDemo .icon dt
+{
+	font-size:12px;
+	color:#3363A1;
+	font-weight:bold;
+	letter-spacing:2px;
+}
+
+/*图标图片样式定义*/
+#deskDemo .icon  img
+{
+	width:60px;
+	height:60px;
+}
+/*-----------------------------------------------图标样式定义结束-------------------------------------*/
+
+
+/*-----------------------------------------------定义快捷菜单开始-------------------------------------*/
+/*--定义桌面快捷菜单--*/
+#deskShortcut.shortcutMenu
+{
+	position:absolute;
+	z-index:3333;
+	width:125px;
+	-moz-box-shadow:5px 5px 15px ButtonShadow;              
+    -webkit-box-shadow:5px 5px 15px ButtonShadow;           
+    box-shadow:5px 5px 15px ButtonShadow;  
+	background-color:ButtonFace;
+}
+
+#deskShortcut .shortcutMenuItem,
+#deskShortcut .shortcutMenuItem:hover
+{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	float:right;
+	border-left:1px solid ButtonShadow;
+	border-bottom:1px solid #9fafc4;
+	border-bottom-style:dotted;
+	padding-left:5px;
+	font-size:12px;
+}
+
+#deskShortcut .shortcutMenuItem:hover
+{
+	background-color:#d9e8fb;
+}
+
+/*--定义窗体缩略图快捷菜单--*/
+#thumShortcutForNote,
+#thumShortcutForUserManage,
+#thumShortcutForPictureBox,
+#thumShortcutForSplitCon,
+#thumShortcutForIncludeChildWin.shortcutMenu
+{
+	width:125px;
+	-moz-box-shadow:5px 5px 15px ButtonShadow;              
+    -webkit-box-shadow:5px 5px 15px ButtonShadow;           
+    box-shadow:5px 5px 15px ButtonShadow;  
+	background-color:ButtonFace;
+}
+
+#thumShortcutForNote .shortcutMenuItem,
+#thumShortcutForNote .shortcutMenuItem:hover,
+#thumShortcutForUserManage .shortcutMenuItem,
+#thumShortcutForUserManage .shortcutMenuItem:hover,
+#thumShortcutForPictureBox .shortcutMenuItem,
+#thumShortcutForPictureBox .shortcutMenuItem:hover,
+#thumShortcutForSplitCon .shortcutMenuItem,
+#thumShortcutForSplitCon .shortcutMenuItem:hover,
+#thumShortcutForIncludeChildWin .shortcutMenuItem,
+#thumShortcutForIncludeChildWin .shortcutMenuItem:hover
+{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	float:right;
+	border-left:1px solid ButtonShadow;
+	border-bottom:1px solid #9fafc4;
+	border-bottom-style:dotted;
+	background-color:ButtonFace;
+	padding-left:5px;
+	font-size:12px;
+}
+
+#thumShortcutForNote .shortcutMenuItem:hover,
+#thumShortcutForUserManage .shortcutMenuItem:hover,
+#thumShortcutForPictureBox .shortcutMenuItem:hover,
+#thumShortcutForSplitCon .shortcutMenuItem:hover,
+#thumShortcutForIncludeChildWin .shortcutMenuItem:hover
+{
+	background-color:#d9e8fb;
+}
+/*-----------------------------------------------定义快捷菜单结束-------------------------------------*/
+
+
+/*-------------------------------------------添加用户对话框样式定义开始--------------------------------*/
+
+#addUserDialog
+{
+	width:250px;
+	height:199px;
+}
+
+#addUserDialog .workSpace
+{
+	width:250px;
+	height:176px;
+	background-color:#d6ece9;
+}
+
+/*--定义workSpace区内容布局--*/
+#addUserDialog .workSpace #add_userInfo,
+#addUserDialog .workSpace #add_userInfo li
+{
+	display:block;
+	padding:0px;
+	border:0px;
+	margin:0px;
+	font-size:12px;
+}
+#addUserDialog .workSpace #add_userInfo
+{
+	width:246px;
+	height:136px;
+	background-color:#dfe8f7;
+	border:2px solid #a9b7d2;
+}
+#addUserDialog .workSpace #add_userInfo li
+{
+	margin-top:6px;
+}
+
+/*--定义workSpace区内容样式--*/
+#addUserDialog .workSpace #add_userInfo li strong,
+#addUserDialog .workSpace #add_userInfo li span
+{
+	margin-left:28px;
+}
+#addUserDialog .workSpace #add_userInfo li strong
+{
+	color:Red;
+	font-weight:normal;
+}
+#addUserDialog .workSpace #add_userInfo li label
+{
+	font-size:12px;
+	font-weight:bold;
+	margin-left:8px;
+	color:#000;
+}
+#addUserDialog #add_userInfo #add_userName,
+#addUserDialog #add_userInfo #add_password
+{
+	width:142px;
+	height:16px;
+}
+#addUserDialog #add_userInfo #add_deskBg
+{
+	width:152px;
+	font-size:12px;
+	background-color:#cceeff;
+}
+
+/*--定义功能按钮样式--*/
+#addUserDialog .confirmBut,
+#addUserDialog .cancelBut
+{
+	position:relative;
+	width:75px;
+	height:21px;
+	float:left;
+	margin-top:8px;
+}
+#addUserDialog .confirmBut
+{
+	margin-left:45px;
+	background-image:url("../img/dialogConfirm.jpg");
+}
+#addUserDialog .cancelBut
+{
+	left:8px;
+	background-image:url("../img/dialogCancel.jpg");
+}
+/*-------------------------------------------添加用户对话框样式定义结束--------------------------------*/
+
+
+
+/*-------------------------------------------修改用户对话框样式定义开始--------------------------------*/
+#changeUserDialog
+{
+	width:250px;
+	height:199px;
+}
+
+#changeUserDialog .workSpace
+{
+	width:250px;
+	height:176px;
+	background-color:#d6ece9;
+}
+
+
+/*--定义workSpace区内容布局--*/
+#changeUserDialog .workSpace #change_userInfo,
+#changeUserDialog .workSpace #change_userInfo li
+{
+	display:block;
+	padding:0px;
+	border:0px;
+	margin:0px;
+	font-size:12px;
+}
+#changeUserDialog .workSpace #change_userInfo
+{
+	width:246px;
+	height:136px;
+	background-color:#dfe8f7;
+	border:2px solid #a9b7d2;
+}
+#changeUserDialog .workSpace #change_userInfo li
+{
+	margin-top:6px;
+}
+
+/*--定义workSpace区内容样式--*/
+#changeUserDialog .workSpace #change_userInfo li strong,
+#changeUserDialog .workSpace #change_userInfo li span
+{
+	margin-left:28px;
+}
+#changeUserDialog .workSpace #change_userInfo li strong
+{
+	color:Red;
+	font-weight:normal;
+}
+#changeUserDialog .workSpace #change_userInfo li label
+{
+	font-size:12px;
+	font-weight:bold;
+	margin-left:8px;
+	color:#000;
+}
+#changeUserDialog #change_userInfo #change_userName,
+#changeUserDialog #change_userInfo #change_password
+{
+	width:142px;
+	height:16px;
+}
+#changeUserDialog #change_userInfo #change_deskBg
+{
+	width:152px;
+	font-size:12px;
+	background-color:#cceeff;
+}
+
+/*--定义功能按钮样式--*/
+#changeUserDialog .confirmBut,
+#changeUserDialog .cancelBut
+{
+	position:relative;
+	width:75px;
+	height:21px;
+	float:left;
+	margin-top:8px;
+}
+#changeUserDialog .confirmBut
+{
+	margin-left:45px;
+	background-image:url("../img/dialogConfirm.jpg");
+}
+#changeUserDialog .cancelBut
+{
+	left:8px;
+	background-image:url("../img/dialogCancel.jpg");
+}
+/*-------------------------------------------修改用户对话框样式定义结束--------------------------------*/
+
+
+
+/*-------------------------------------------登陆用户对话框样式定义开始--------------------------------*/
+#landUserDialog
+{
+	width:250px;
+	height:122px;
+}
+
+#landUserDialog .workSpace
+{
+	width:250px;
+	height:100px;
+	background-color:#d6ece9;
+}
+
+/*--定义workSpace区内容布局--*/
+#landUserDialog .workSpace #land_userInfo,
+#landUserDialog .workSpace #land_userInfo li
+{
+	display:block;
+	padding:0px;
+	border:0px;
+	margin:0px;
+	font-size:12px;
+}
+#landUserDialog .workSpace #land_userInfo
+{
+	width:246px;
+	height:62px;
+	background-color:#dfe8f7;
+	border:2px solid #a9b7d2;
+}
+#landUserDialog .workSpace #land_userInfo li
+{
+	margin-top:6px;
+}
+
+/*--定义workSpace区内容样式--*/
+#landUserDialog .workSpace #land_userInfo li strong
+{
+	color:Red;
+	font-weight:normal;
+	margin-left:28px
+}
+
+#landUserDialog .workSpace #land_userInfo li label
+{
+	font-size:12px;
+	font-weight:bold;
+	margin-left:8px;
+	color:#000;
+}
+#landUserDialog #land_userInfo #land_userName,
+#landUserDialog #land_userInfo #land_password
+{
+	width:142px;
+	height:16px;
+}
+
+/*--定义功能按钮样式--*/
+#landUserDialog .confirmBut,
+#landUserDialog .cancelBut
+{
+	position:relative;
+	width:75px;
+	height:21px;
+	float:left;
+	margin-top:8px;
+}
+#landUserDialog .confirmBut
+{
+	margin-left:45px;
+	background-image:url("../img/dialogConfirm.jpg");
+}
+#landUserDialog .cancelBut
+{
+	left:8px;
+	background-image:url("../img/dialogCancel.jpg");
+}
+/*-------------------------------------------登陆用户对话框样式定义结束--------------------------------*/
+
+
+
+/*---------------------------------------------记事本应用样式定义开始---------------------------------*/
+
+/*菜单分隔线样式*/
+#noteWin .emenu hr
+{
+	width:1px;
+	height:100%;
+	float:left;
+	margin:0px;
+	padding:0px;
+	border-width:0px;
+	border-left:1px solid #b2b9c1;
+	border-style:dotted;
+}
+
+/*定义菜单项样式*/
+#deskDemo .emenu .menuItem
+{
+	width:50px;
+	font-size:12px;
+}
+
+/*定义菜单项中A标签的样式*/
+#noteWin .menuItem a 
+{
+	display:block;
+	width:auto;
+	height:26px;
+	padding:0px;
+	border:0px;
+	margin:0px;
+}
+#noteWin .menuItem a:hover 
+{
+	height:26px;
+	background-color:#d8e7fa;
+	
+}
+
+/*定义子菜单条样式*/
+#noteWin .childMenu
+{
+	width:100px;
+}
+#noteWin .childMenu .menuItem
+{
+	width:auto;
+	text-align:left;
+}
+
+#noteWin .childMenu .menuItem a 
+{
+	padding-left:10px;
+}
+
+/*定义工作区样式*/
+#noteWin .workSpace 
+{
+	height:398px;
+}
+
+/*定义文本编辑器样式*/
+#noteWin .workSpace #textEdit
+{
+	border:0px;
+	overflow:auto;
+	width:100%;
+	height:100%;
+}
+/*---------------------------------------------记事本应用样式定义结束---------------------------------*/
+
+
+
+/*---------------------------------------------用户管理应用样式定义开始------------------------------*/
+#userManageWin .toolItem{
+	height:26px;
+	line-height:28px;
+	padding-left:25px;
+	font-size:12px;
+	margin-left:5px;
+	background-repeat:no-repeat;
+}
+
+#userManageWin .workSpace
+{
+	border:1px solid #a9b7d2;
+	height:398px;
+}
+
+#userManageWin .addUserTool
+{
+	background-image:url("../img/addToolItem.jpg");
+	background-repeat:no-repeat;
+}
+
+#userManageWin .changeUserTool
+{
+	background-image:url("../img/changeToolItem.jpg");
+	background-repeat:no-repeat;
+}
+
+#userManageWin .landUserTool
+{
+	background-image:url("../img/landToolItem.jpg");
+	background-repeat:no-repeat;
+}
+
+
+#userManageWin #userList
+{
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #659fec;
+	width:95%;
+}
+
+#userManageWin #userList th,
+#userManageWin #userList td
+{	
+	font-size:12px;
+	text-align:center;
+	height:24px;
+	border:1px solid #659fec;
+}
+/*---------------------------------------------用户管理应用样式定义结束------------------------------*/
+
+
+
+/*----------------------------------------------相删应用样式定义开始----------------------------------*/
+
+/*标签样式定义*/
+#pictureManageWin .tabControl
+{
+	height:428px;
+}
+
+#pictureManageWin .tabControl .tabHead
+{
+	width:auto;
+	height:26px;
+}
+
+#pictureManageWin .tag
+{
+	width:80px;
+	height:20px;
+	line-height:20px;
+	margin-left:5px;
+	margin-top:3px;
+	font-size:12px;
+	background-color:Red;
+}
+
+/*定义工作区样式*/
+#pictureManageWin .workSpace 
+{
+	height:428px;
+	border:0px;
+}
+
+/*标签体样式定义*/
+#pictureManageWin .tabControl .tabBody
+{
+	height:398px;
+}
+
+/*标签正文样式定义*/
+#pictureManageWin .tabControl .substance
+{
+	width:100%;
+	height:100%;
+}
+
+#pictureManageWin .tabControl .substance .common
+{
+	position:relative;
+	left:20px;
+	top:20px;
+	width:458px;
+	height:358px;
+	overflow:hidden;
+	-moz-box-shadow:5px 5px 15px #8bb38f;              
+    -webkit-box-shadow:5px 5px 15px #8bb38f;           
+    box-shadow:5px 5px 15px #8bb38f;  
+}
+
+#pictureManageWin .tabControl .substance .common img
+{
+	display:block;
+	position:static;
+	width:100%;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*----------------------------------------------相删应用样式定义结束----------------------------------*/
+
+
+/*---------------------------------------------包含框架窗体样式定义开始---------------------------------*/
+#includeSplitConWin .workSpace
+{
+	height:416px;
+	padding:5px;
+	background-color:#dfe8f6;
+	border:1px solid #99bbe8;
+}
+
+#includeSplitConWin .panelHead
+{
+	width:auto;
+	height:24px;
+	line-height:24px;
+	color:#15428b;
+	font-weight:bold;
+	font-size:12px;
+	text-align:left;
+	letter-spacing:2px;
+	padding-left:8px;
+	border-bottom:1px solid #99bbe8;
+	background-image:url("../img/panelHeadBg.jpg");
+}
+
+#includeSplitConWin #topPanel
+{
+	border-bottom:1px solid #99bbe8;
+}
+#includeSplitConWin #bottomPanel
+{
+	border-top:1px solid #99bbe8;
+}
+
+#includeSplitConWin #leftPanel
+{
+	border-right:1px solid #99bbe8;
+}
+#includeSplitConWin #rightPanel
+{
+	border-left:1px solid #99bbe8;
+}
+
+#includeSplitConWin #bottomPanel ul,
+#includeSplitConWin #bottomPanel li
+{
+	display:block;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	font-size:11px;
+	color:#15428b;
+	letter-spacing:1px;
+	line-height:22px;
+}
+/*---------------------------------------------包含框架窗体样式定义结束---------------------------------*/
+
+
+/*--------------------------------------------含子窗体的窗体样式定义开始------------------------------*/
+#includeChildWin .toolItem
+{
+	height:26px;
+	line-height:28px;
+	padding-left:25px;
+	font-size:12px;
+	margin-left:5px;
+	background-image:url("../img/openWinToolItem.jpg");
+	background-repeat:no-repeat;
+}
+
+#includeChildWin .workSpace
+{
+	height:398px;
+}
+
+#childWin
+{
+	top:50px;
+	width:300px;
+	height:300px;
+}
+
+#childWin .workSpace
+{
+	height:276px;
+}
+/*--------------------------------------------含子窗体的窗体样式定义结束------------------------------*/
+
+
+/*----------------------------------------------开始菜单样式定义开始-----------------------------------*/
+#deskDemo .startMenu
+{
+	float:left;
+}
+
+#deskDemo .startChildMenu
+{
+	padding-left:8px;
+	padding-right:8px;
+	background-color:#000;
+	border:1px solid #434649;
+	-moz-box-shadow:5px 5px 15px ButtonShadow;              
+    -webkit-box-shadow:5px 5px 15px ButtonShadow;           
+    box-shadow:5px 5px 15px ButtonShadow; 
+}
+
+#deskDemo .startChildMenu .startMenuItem,
+#deskDemo .startChildMenu .startMenuItem:hover
+{
+	width:130px;
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	background-color:#fff;
+	border-bottom:1px solid #9fafc4;
+	border-style:dotted;
+	padding-left:20px;
+}
+
+#deskDemo .startChildMenu .startMenuItem:hover
+{
+	background-color:#d9e8fb;
+	padding-left:20px;
+}
+
+#deskDemo .menuCaption
+{
+   padding:5px 0px;
+   color:#fff;
+   font-size:12px;
+   font-weight:bold;
+}
+/*----------------------------------------------开始菜单样式定义结束-----------------------------------*/
+
+
+/*-----------------------------------------------定义窗体缩略图开始------------------------------------*/
+#thums .thum
+{
+	color:#fff;
+	font-size:12px;
+}
+
+#thums
+{
+	display:block;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	float:left;
+}
+/*-----------------------------------------------定义窗体缩略图结束------------------------------------*/
