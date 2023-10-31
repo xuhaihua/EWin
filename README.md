@@ -74,3 +74,5 @@ EWin框架通过样式赋予标签行为，可以不用写任何一段Javascript
 </html>
 ```
 <img width="100%" src="https://thumbnail0.baidupcs.com/thumbnail/58f8ceedboebc6840db2fa9727e06dc2?fid=1951275689-250528-677206901128424&time=1698764400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-6Lu0P8kzon8Yfv0kuImNkNzUXV8%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=132224130094535062&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video" />
+
+## 正式示例打开 app / windows / index.html 可以看到整个 web 桌面应用的效果
