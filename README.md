@@ -1,4 +1,6 @@
 # EWin
+EWin通过样式赋予标签行为，可以不用写任何一段Javascript就能开发出与EXT一样的web windows桌面应用
+
 ```
 <!DOCTYPE html>
 <html>
