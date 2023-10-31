@@ -70,4 +70,4 @@
 </body>
 </html>
 ```
-<img src="https://img0.baidu.com/it/u=1061660946,3633076518&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800" style="width: 100%" />
+<img src="https://img0.baidu.com/it/u=1061660946,3633076518&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800" width="100%" />
